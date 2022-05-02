@@ -14,25 +14,25 @@
     <div class="container" id="calculatrice">
         <div class="row row-cols-4">
             <div class="result col-12 text-end">{{display}}</div>
-            <button class="bg-grey col    ">C</button>
-            <button class="bg-grey col    ">+/-</button>
-            <button class="bg-grey col    ">%</button>
-            <button class="bg-warning col ">/</button>
+            <button @click="allClear"  class="bg-grey col    ">C</button>
+            <button @click="reverse"   class="bg-grey col    ">+/-</button>
+            <button @click="percent"   class="bg-grey col    ">%</button>
+            <button @click="divide"    class="bg-warning col ">/</button>
             <button @click="append(7)" class="bg-white col   ">7</button>
             <button @click="append(8)" class="bg-white col   ">8</button>
             <button @click="append(9)" class="bg-white col   ">9</button>
-            <button class="bg-warning col ">X</button>
+            <button @click="multiply"  class="bg-warning col ">X</button>
             <button @click="append(4)" class="bg-white col   ">4</button>
             <button @click="append(5)" class="bg-white col   ">5</button>
             <button @click="append(6)" class="bg-white col   ">6</button>
-            <button class="bg-warning col ">-</button>
+            <button @click="sub"       class="bg-warning col ">-</button>
             <button @click="append(1)" class="bg-white col   ">1</button>
             <button @click="append(2)" class="bg-white col   ">2</button>
             <button @click="append(3)" class="bg-white col   ">3</button>
-            <button class="bg-warning col ">+</button>
+            <button @click="add"       class="bg-warning col ">+</button>
             <button @click="append(0)" class="bg-white col-6 ">0</button>
-            <button class="bg-white col   ">.</button>
-            <button class="bg-warning col ">=</button>
+            <button @click="decimal"   class="bg-white col   ">.</button>
+            <button @click="solve"     class="bg-warning col ">=</button>
         </div>
     </div>
 </body>
