@@ -14,7 +14,7 @@ const randVue = new Vue({
 
     methods: {
         append(number) {
-            if (this.display === '0') {this.display = number}
+            if (this.display === '0' && number != 0) {this.display = number}
             else {
                 this.display = '' + this.display + number;
                 this.operatorClicked = false;
@@ -67,6 +67,9 @@ const randVue = new Vue({
 
         reverse() {
             console.log('reverse');
+            if (this.display.charAt (this.display.length - 1) == /[0-9]*/g) {
+                console.log('ui');
+            }
             let n = this.display;
             n = n.replace(/\+|\-|\/|\x/g, '|');
             n = n.split('|');
@@ -92,6 +95,8 @@ const randVue = new Vue({
 
         solve() {
             console.log('résolution');
+            result = this.display.replace('x','*');
+            this.display = eval(result);
         },
 
 
